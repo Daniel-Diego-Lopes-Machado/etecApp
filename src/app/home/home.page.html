@@ -1,0 +1,103 @@
+<ion-header >
+  <ion-toolbar color="padrao">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Etec
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>
+        "Comendador João Rays"
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="assets/logo.png"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" >
+    <ion-card-header>
+      <ion-card-title>Notícias e Novidades</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card *ngFor = "let itemDaLista of listaNoticiais" (click)="mostraNoticia(itemDaLista)" color="padrao">
+
+      
+      <h2>{{itemDaLista.nome}}</h2>
+      <!--<ion-button size="small" color="padrao" class="center" >Leia Mais</ion-button>-->
+      <img [src]="itemDaLista.img">
+      <!--<h2 class="espaco">Ajuda com e-mail institucional</h2>
+      <ion-button size="small" color="padrao" routerLink="/n2">Leia Mais</ion-button>
+      <h2 class="espaco">Aviso de convocação 2</h2>
+      <ion-button size="small" color="padrao" routerLink="/n3">Leia Mais</ion-button>-->
+
+    </ion-card>
+      <ion-button routerLink="/mais" color="padrao" class="espaco" expand="block" fill="outline">Mais Notícias</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>
+        Ensino Medio
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>O Ensino Médio, etapa final da educação básica, com duração mínima de três anos aprofunda os conhecimentos
+        adquiridos no ensino fundamental, possibilitando o prosseguimento de estudos.
+      </p>
+      <ion-img src="assets\ensinoMedio.jpg"></ion-img>
+      <ion-button color="padrao" class="espaco" expand="block" fill="outline" routerLink="/ensinomedio">Saiba Mais</ion-button>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>
+        Cursos Tecnicos
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!--<p>Os cursos técnicos oferecidos são</p>-->
+      <ion-chip color="padrao" routerLink="/administracao">
+        <ion-icon name="clipboard" color="dark"></ion-icon>
+        <ion-label>Administração</ion-label>
+      </ion-chip>
+      <ion-chip color="padrao" routerLink="/contabilidade">
+        <ion-icon name="calculator" color="dark"></ion-icon>
+        <ion-label>Contabilidade</ion-label>
+      </ion-chip>
+      <ion-chip color="padrao" routerLink="/desenvolvimento">
+        <ion-icon name="phone-portrait" color="dark"></ion-icon>
+        <ion-label>Desenvolvimento de Sistemas</ion-label>
+      </ion-chip>
+      <ion-chip color="padrao" routerLink="/informatica">
+        <ion-icon name="laptop" color="dark"></ion-icon>
+        <ion-label>Informática para Internet</ion-label>
+      </ion-chip>
+      <ion-chip color="padrao" routerLink="/logistica">
+        <ion-icon name="trending-up" color="dark"></ion-icon>
+        <ion-label>Logística</ion-label>
+      </ion-chip>
+      <ion-chip color="padrao" routerLink="/marketing">
+        <ion-icon name="globe" color="dark"></ion-icon>
+        <ion-label>Marketing</ion-label>
+      </ion-chip>
+      <ion-chip color="padrao" routerLink="/secretariado">
+        <ion-icon name="business" color="dark"></ion-icon>
+        <ion-label>Secretariado</ion-label>
+      </ion-chip>
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="padrao">
+    <ion-buttons slot="start">
+      <ion-button href="/">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notícias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card color="light">
+    <ion-card-header>
+      
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-card *ngFor = "let itemDaLista of listaNoticiais" (click)="mostraNoticia(itemDaLista)" color="padrao">      
+      <h2>{{itemDaLista.nome}}</h2>
+      <!--<ion-button size="small" color="padrao" class="center" (click)="mostraNoticia(itemDaLista)">Leia Mais</ion-button>-->
+      <img [src]="itemDaLista.img">
+      <!--<h2 class="espaco">Semana Paulo Freire</h2>
+      <ion-button size="small" color="padrao">Leia Mais</ion-button>
+      <h2 class="espaco">Vestibulinho Etec – 1ª lista de convocação e matrícula</h2>
+      <ion-button size="small" color="padrao">Leia Mais</ion-button>-->
+    
+      </ion-card>
+
+    
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
